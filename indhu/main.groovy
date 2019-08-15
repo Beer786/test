@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 import org.apache.commons.codec.binary.Base64;
 
-String webPage = "http://192.168.43.238:7990/rest/api/1.0/projects/HALO/repos";
+String webPage = "http://localhost:7990/rest/api/1.0/projects/MAV/repos";
 String name = "shever";
 String password = "redhat";
 String authString = name + ":" + password;
