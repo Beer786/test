@@ -21,7 +21,7 @@ choiceType: 'PT_SINGLE_SELECT',
 description: 'Select a choice', 
 filterable: true, 
 name: 'SERVICE', 
-randomName: 'choice-parameter-7601235200970', 
+randomName: 'choice-parameter-7601235200972', 
 script: [$class: 'GroovyScript', 
 fallbackScript: [classpath: [], 
                 sandbox: true, 
@@ -48,7 +48,7 @@ fallbackScript: [classpath: [],
                 script: 'if(ENV.equals("Dev")) {return [\'DEV1\', \'DEV2\', \'Dev3\', \'Dev4\']} else if(ENV.equals("Stag")) {return [\'Stag1\',\'Stag2\',\'Stag3\',\'Stag4\']} else {return [\'Prod1\',\'Prod2\']}']]
         ],
 
-string(defaultValue: '', description: '', name: 'Artifact_Name', trim: true)
+string(defaultValue: '', description: '', name: 'Branch', trim: true)
 ])
 ])
 
