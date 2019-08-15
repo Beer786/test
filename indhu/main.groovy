@@ -2,8 +2,8 @@ import groovy.json.JsonSlurper
 import org.apache.commons.codec.binary.Base64;
 
 String webPage = "http://localhost:7990/rest/api/1.0/projects/MAV/repos";
-String name = "shever";
-String password = "redhat";
+String name = "admin";
+String password = "naushin@786";
 String authString = name + ":" + password;
 System.out.println("auth string: " + authString);
 byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
