@@ -19,7 +19,6 @@ def data = new JsonSlurper().parseText(output)
 def repo_list = data.values
 repo_names = [ ]
 for ( repo in repo_list ) {
-println ("utfvrefyjr")
 println (repo.name)
 repo_names.add('"' + repo.name + '"')
 }
@@ -41,8 +40,8 @@ if ( matcher.find()){
 }
 
 
-def CreatePipelineJob() {
-    pipelineJob("shever-testing") {
+def CreatePipelineJob(jobname, ptl) {
+    pipelineJob("${jobname}") {
         logRotator {
             numToKeep(20)
         }
@@ -56,7 +55,7 @@ def CreatePipelineJob() {
         //displayName("#${BUILD_NUMBER} ${ENV}")
         definition {
             cps {
-                script(readFileFromWorkspace('indhu/pipeline.groovy'))
+                script(readFileFromWorkspace("indhu/${ptl}.groovy"))
                 sandbox()
                 }
                 }
@@ -64,4 +63,6 @@ def CreatePipelineJob() {
 
 }
 
-CreatePipelineJob()
+CreatePipelineJob("Indu-CI", "pipeline")
+CreatePipelineJob("Indu-JenkinsCI", "pipeline2")
+
