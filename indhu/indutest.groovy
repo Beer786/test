@@ -50,7 +50,7 @@ fallbackScript: [classpath: [],
                 script: 'if(ENV.equals("Dev")) {return [\'DEV1\', \'DEV2\', \'Dev3\', \'Dev4\']} else if(ENV.equals("Stag")) {return [\'Stag1\',\'Stag2\',\'Stag3\',\'Stag4\']} else {return [\'Prod1\',\'Prod2\']}']]
         ],
 
-choice(choices: ['dev1', 'dev2', 'dev3', 'dev4'], description: '', name: 'Env')]),
+choice(choices: ['dev1', 'dev2', 'dev3', 'dev4'], description: '', name: 'Env'),
 string(defaultValue: '', description: '', name: 'Artifact_Name', trim: true)
 ])
 ])
