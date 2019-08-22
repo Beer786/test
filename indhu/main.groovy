@@ -3,12 +3,6 @@ def CreatePipelineJob(jobname, ptl) {
         logRotator {
             numToKeep(20)
         }
-    environmentVariables {
-            envs('repo_list': "${repo_names}")
-            envs('env_data': "${env_data}")
-            envs('env_list': "${env_list}")
-            envs('devEnvList': "${devEnvList}")
-        }
 
         //displayName("#${BUILD_NUMBER} ${ENV}")
         definition {
