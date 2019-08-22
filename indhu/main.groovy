@@ -41,8 +41,8 @@ if ( matcher.find()){
 }
 
 
-def CreatePipelineJob() {
-    pipelineJob("shever-testing") {
+def CreatePipelineJob(jobname, ptl) {
+    pipelineJob("${jobname}") {
         logRotator {
             numToKeep(20)
         }
@@ -56,7 +56,7 @@ def CreatePipelineJob() {
         //displayName("#${BUILD_NUMBER} ${ENV}")
         definition {
             cps {
-                script(readFileFromWorkspace('indhu/pipeline.groovy'))
+                script(readFileFromWorkspace("indhu/${ptl}.groovy"))
                 sandbox()
                 }
                 }
@@ -64,4 +64,4 @@ def CreatePipelineJob() {
 
 }
 
-CreatePipelineJob()
+CreatePipelineJob("Indu-CI-test", "indutest")
