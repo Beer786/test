@@ -55,7 +55,7 @@ string(defaultValue: '', description: '', name: 'Artifact_Name', trim: true)
 ])
 ])
 */
-properties([ parameters([[$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: 'Please select Service', filterLength: 1, filterable: true, name: 'Service', randomName: 'choice-parameter-532642778576920', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: 'return [ERROR]'], script: [classpath: [], sandbox: false, script: 'return ${env.repo_list}' ]]], string(defaultValue: '', description: 'Please select a branch', name: 'Branch', trim: false), choice(choices: ['dev1', 'dev2', 'dev3', 'dev4', 'dev5', 'dev6'], description: 'please select env', name: 'Environment')])])
+properties([ parameters([[$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: 'Please select Service', filterLength: 1, filterable: true, name: 'Service', randomName: 'choice-parameter-532642778576920', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: 'return [ERROR]'], script: [classpath: [], sandbox: false, script: "return ${env.repo_list}" ]]], string(defaultValue: '', description: 'Please select a branch', name: 'Branch', trim: false), choice(choices: ['dev1', 'dev2', 'dev3', 'dev4', 'dev5', 'dev6'], description: 'please select env', name: 'Environment')])])
 
 
 try {
