@@ -1,7 +1,7 @@
 node {
 properties([
     parameters([
-    [$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: false, name: 'Service', randomName: 'choice-parameter-536601121997133', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: 'return [ERROR]'], script: [classpath: [], sandbox: false, script: '''import groovy.json.JsonSlurper
+    [$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: true, name: 'Service', randomName: 'choice-parameter-536601121997133', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: true, script: 'return [ERROR]'], script: [classpath: [], sandbox: true, script: '''import groovy.json.JsonSlurper
 import org.apache.commons.codec.binary.Base64;
 String webPage = "http://localhost:7990/rest/api/1.0/projects/MAV/repos";
 String name = "admin";
